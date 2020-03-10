@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef Name="RS_BuildingNaturalBase" Abstract="True">
+	<category>Building</category>
+	<selectable>true</selectable>
+	<drawerType>MapMeshOnly</drawerType>
+	<filthLeaving>Filth_RubbleRock</filthLeaving>
+	<scatterableOnMapGen>false</scatterableOnMapGen>
+</ThingDef>
+
+
+<ThingDef Name="RS_RockMineable" ParentName="RS_BuildingNaturalBase" Abstract="True">
+	<thingClass>Mineable</thingClass>
+	<graphicData>
+		<texPath>Things/Building/Linked/Rock_Atlas</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<linkType>CornerFiller</linkType>
+		<linkFlags>
+			<li>Rock</li>
+			<li>MapEdge</li>
+		</linkFlags>
+	</graphicData>
+	<altitudeLayer>Building</altitudeLayer>
+	<passability>Impassable</passability>
+	<blockWind>true</blockWind>
+	<castEdgeShadows>true</castEdgeShadows>
+	<fillPercent>1</fillPercent>
+	<coversFloor>true</coversFloor>
+	<neverMultiSelect>true</neverMultiSelect>
+	<rotatable>false</rotatable>
+	<saveCompressible>true</saveCompressible>
+	<holdsRoof>true</holdsRoof>
+	<staticSunShadowHeight>1.0</staticSunShadowHeight>
+	<blockLight>true</blockLight>
+	<mineable>true</mineable>
+	<statBases>
+		<Flammability>0</Flammability>
+	</statBases>
+	<building>
+		<isInert>true</isInert>
+		<isNaturalRock>true</isNaturalRock>
+		<canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
+        <deconstructible>false</deconstructible>
+	</building>
+</ThingDef>
+
+<!--=================== Mineable Runite Ore (Proof of Concept) ===================-->
+
+<ThingDef ParentName="RS_RockMineable">
+	<defName>RS_MineableRunite</defName>
+	<label>runite ore</label>
+	<description>Rimscape - Core \nRunite is a magical metal from Gielinor, and is one of the strongest conventially available ores.</description>
+	<graphicData>
+		<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<color>(47,43,42)</color>
+		<colorTwo>(88,139,147)</colorTwo>
+	</graphicData>
+	<statBases>
+		<MaxHitPoints>4000</MaxHitPoints>
+	</statBases>
+	<building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>RS_RuniteOre</mineableThing>
+		<mineableYield>25</mineableYield>
+		<mineableScatterCommonality>0.2</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>3~8</mineableScatterLumpSizeRange>
+	</building>
+</ThingDef>
+
+<!--=================== Mineable Coal ===================-->
+<!-- Coal is required to smelt all ores (except for copper/tin.)
+     and will have a high spawn rate because of it. -->
+	 
+<ThingDef ParentName="RS_RockMineable">
+	<defName>RS_MineableCoal</defName>
+	<label>coal ore</label>
+	<description>Rimscape - Core \nCoal is used in the process of making most metals from Gielinor, except for the alloy metal bronze.</description>
+	<graphicData>
+		<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<color>(47,43,42)</color>
+		<colorTwo>(8,8,8)</colorTwo>
+	</graphicData>
+	<statBases>
+		<MaxHitPoints>1500</MaxHitPoints>
+	</statBases>
+	<building>
+		<isResourceRock>true</isResourceRock>
+		<mineableThing>RS_CoalOre</mineableThing>
+		<mineableYield>35</mineableYield>
+		<mineableScatterCommonality>1.00</mineableScatterCommonality>
+      <mineableScatterLumpSizeRange>5~16</mineableScatterLumpSizeRange>
+	</building>
+</ThingDef>
+
+</Defs>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="RS_ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<statBases>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+	
+	<!-- ================ Runite Ore & Runite Bar (Proof of Concept) ================ --> 
+
+  <ThingDef Name="RS_RuniteOre" ParentName="RS_ResourceBase">
+    <defName>RS_RuniteOre</defName>
+    <description>Rimscape - Core \nRunite is a magical ore from Gielinor, and is typically very difficult to obtain. It creates a a very strong metal when forged.</description>
+    <label>runite ore</label>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ore/RuniteOre</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<useHitPoints>false</useHitPoints>
+	<healthAffectsPrice>false</healthAffectsPrice>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <statBases>
+      <MarketValue>4.4</MarketValue>
+      <Mass>0.8</Mass>
+	</statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>0.5</deepCommonality>
+    <deepCountPerPortion>25</deepCountPerPortion>
+    <deepLumpSizeRange>5~10</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+	  <commonality>0.1</commonality>
+      <statOffsets>
+        <Beauty>-1</Beauty>
+      </statOffsets>
+    </stuffProps>
+  </ThingDef>
+	
+  <ThingDef ParentName="RS_ResourceBase">
+    <defName>RS_RuniteBar</defName>
+    <description>Rimscape - Core \nRunite is a magical metal, known for its strength and durability. It is one of the strongest known metals in Gielinor.</description>
+    <label>runite</label>
+    <graphicData>
+      <texPath>Things/Item/Resource/Metal/RuniteBar</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <useHitPoints>false</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MarketValue>10</MarketValue>
+      <Mass>1</Mass>
+      <StuffPower_Armor_Sharp>1.35</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.85</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.54</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+      <BluntDamageMultiplier>1.25</BluntDamageMultiplier>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <commonality>0.1</commonality>
+      <color>(88,139,147)</color>
+      <constructEffect>ConstructMetal</constructEffect>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>3</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>0.15</Flammability>
+        <WorkToMake>2.5</WorkToMake>
+        <WorkToBuild>2.5</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+  
+  	<!-- ================ Coal Ore ================ --> 
+	
+  <ThingDef Name="RS_CoalOre" ParentName="RS_ResourceBase">
+    <defName>RS_CoalOre</defName>
+    <description>Rimscape - Core \nWhile not special on it's own, coal is used in the process of forging many of the metals from Gielinor.</description>
+    <label>coal ore</label>
+    <graphicData>
+      <texPath>Things/Item/Resource/Ore/CoalOre</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+	<useHitPoints>false</useHitPoints>
+	<healthAffectsPrice>false</healthAffectsPrice>
+    <soundInteract>ChunkRock_Drop</soundInteract>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <statBases>
+      <MarketValue>0.2</MarketValue>
+      <Mass>0.6</Mass>
+	</statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <deepCommonality>1</deepCommonality>
+    <deepCountPerPortion>35</deepCountPerPortion>
+    <deepLumpSizeRange>8~18</deepLumpSizeRange>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
+    <stuffProps>
+      <statOffsets>
+        <Beauty>-1</Beauty>
+      </statOffsets>
+    </stuffProps>
+  </ThingDef>
+  
+</Defs>
