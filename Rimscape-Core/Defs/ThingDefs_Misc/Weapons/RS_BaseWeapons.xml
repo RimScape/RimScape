@@ -84,12 +84,12 @@
     </comps>
   </ThingDef>
 
-  <ThingDef Name="RS_BaseProjectile" Abstract="True">
+  <ThingDef Name="RS_BaseProjectileRanged" Abstract="True">
     <category>Projectile</category>
     <tickerType>Normal</tickerType>
     <altitudeLayer>Projectile</altitudeLayer>
     <thingClass>Bullet</thingClass>
-    <label>bullet</label>
+    <label>arrow</label>
     <useHitPoints>False</useHitPoints>
     <neverMultiSelect>True</neverMultiSelect>
     <graphicData>

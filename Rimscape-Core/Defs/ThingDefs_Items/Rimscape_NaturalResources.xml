@@ -107,7 +107,7 @@
 	
   <ThingDef Name="RS_CoalOre" ParentName="RS_ResourceBase">
     <defName>RS_CoalOre</defName>
-    <description>Rimscape - Core \nWhile not special on it's own, coal is used in the process of forging many of the metals from Gielinor.</description>
+    <description>Rimscape - Core \nWhile not special on its own, coal is used in the process of forging many of the metals from Gielinor.</description>
     <label>coal ore</label>
     <graphicData>
       <texPath>Things/Item/Resource/Ore/CoalOre</texPath>

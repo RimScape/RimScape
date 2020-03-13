@@ -1,0 +1,117 @@
+<ThingDef ParentName="ResourceVerbBase">
+    <defName>RS_WoodLog</defName>
+    <label>logs</label>
+    <description>Logs from regular trees. Useful for fletching into bows, or for use in construction.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Log</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Mass>0.4</Mass> 
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.54</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.54</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.40</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>4</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.45</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <stuffProps>
+      <stuffAdjective>wooden</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>1.00</commonality>
+      <color>(133,97,67)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>0.65</MaxHitPoints>
+        <Beauty>1</Beauty>
+        <Flammability>1</Flammability>
+        <WorkToMake>0.7</WorkToMake>
+        <WorkToBuild>0.7</WorkToBuild>
+        <DoorOpenSpeed>1.2</DoorOpenSpeed>
+      </statFactors>
+    </stuffProps>
+    <isTechHediff>true</isTechHediff>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <tools>
+      <li>
+        <label>log</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+</ThingDef>
+
+<ThingDef ParentName="RS_WoodLog">
+    <defName>RS_OakLog</defName>
+    <label>oak logs</label>
+    <description>Logs from oak trees. Useful for fletching into bows, or for use in construction.</description>
+    <MarketValue>1.4</MarketValue>
+	<graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Oak</texPath>
+	</graphicData>
+</ThingDef>
+
+<ThingDef ParentName="RS_WoodLog">
+    <defName>RS_WillowLog</defName>
+    <label>willow logs</label>
+    <description>Logs from willow trees. Useful for fletching into bows, or for use in construction.</description>
+    <MarketValue>1.8</MarketValue>
+	<graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Willow</texPath>
+	</graphicData>
+</ThingDef>
+
+<ThingDef ParentName="RS_WoodLog">
+    <defName>RS_MapleLog</defName>
+    <label>maple logs</label>
+    <description>Logs from maple trees. Useful for fletching into bows, or for use in construction.</description>
+    <MarketValue>2.4</MarketValue>
+	<graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Maple</texPath>
+	</graphicData>
+</ThingDef>
+
+<ThingDef ParentName="RS_WoodLog">
+    <defName>RS_YewLog</defName>
+    <label>yew logs</label>
+    <description>Logs from yew trees. Useful for fletching into bows, or for use in construction.</description>
+    <MarketValue>3.2</MarketValue>
+	<graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Yew</texPath>
+	</graphicData>
+</ThingDef>
+
+<ThingDef ParentName="RS_WoodLog">
+    <defName>RS_MagicLog</defName>
+    <label>magic logs</label>
+    <description>Logs from magic trees. Useful for fletching into bows, or for use in construction.</description>
+    <MarketValue>5.0</MarketValue>
+	<graphicData>
+      <texPath>Things/Item/Resource/Logs/RS_Magic</texPath>
+	</graphicData>
+</ThingDef>
